@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :tests, polymorphic: true
+  has_many :tests
 end
