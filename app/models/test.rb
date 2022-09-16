@@ -5,4 +5,6 @@ class Test < ApplicationRecord
       .order(title: :desc)
       .pluck(:title)
   end
+
+  has_and_belongs_to_many :users
 end
