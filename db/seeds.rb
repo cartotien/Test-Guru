@@ -62,3 +62,9 @@ Answer.create!(
     { body: 'Python framework', correct: false, question_id: questions[4].id }
   ]
 )
+
+TestPassage.create!(
+  [
+    { test_id: tests[0].id, user_id: users[0].id }
+  ]
+)
