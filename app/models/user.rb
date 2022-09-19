@@ -4,7 +4,6 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
 
   def user_tests(level)
-    Test.joins('JOIN test_passages ON test_passages.test_id = tests.id')
-        .where('test_passages.user_id': id, level: level)
+    tests.where(level: level)
   end
 end
