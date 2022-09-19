@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2022_09_17_135727) do
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "test_id"
-    t.integer "user_id"
+    t.integer "test_id", null: false
+    t.integer "user_id", null: false
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
   end
