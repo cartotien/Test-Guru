@@ -9,7 +9,7 @@ class Test < ApplicationRecord
   has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages
 
-  scope :by_category, lambda { |category_title|
+  scope :by_category, ->(category_title) {
                         joins(:category)
                           .where(categories: { title: category_title })
                           .order(title: :desc)
