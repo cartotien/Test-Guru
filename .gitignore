@@ -27,9 +27,9 @@
 !/storage/.keep
 
 /public/assets
-/public/.rubocop_todo.yml
-/public/rubocop.yml
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/.rubocop_todo.yml
+/config/rubocop.yml
