@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
 
-  def test_passages_by_level(level)
+  def passed_tests_by_level(level)
     tests.where(level: level)
   end
 end
