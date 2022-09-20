@@ -13,7 +13,6 @@ class Test < ApplicationRecord
                         joins(:category)
                           .where(categories: { title: category_title })
                           .order(title: :desc)
-                          .pluck(:title)
                       }
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
