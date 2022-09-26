@@ -1,0 +1,10 @@
+<% @questions.each do |question| %>
+  <ul>
+    <h2><%= question.body %></h2>
+    <% question.answers.each do |answer| %>
+      <li>
+        <%= answer.body %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
