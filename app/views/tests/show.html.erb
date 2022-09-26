@@ -1,15 +1,16 @@
 
-<h2><%= @test.title %></h2>
-  <table>
-    <th>Level: <%= @test.level %></th>
-    <th>Category: <%= @test.category.title %></th>
-  </table>
+<h2><%= @test.title %></h2><hr>
+  <div>
+    <span>Level: <%= @test.level %></span>
+    <span>Category: <%= @test.category.title %></span>
+  </div>
 
   <table>
-    <th>Question</th>
+    <th colspan="10">Question</th>
+    <th colspan="10">Actions</th>
     <%= render @questions %>
   </table>
-  
-<%= button_to 'Back', tests_path, :method => :get %>
+
+<%= button_to 'Back', tests_path, :method => :get %></span>
 <%= button_to 'Create Question', new_test_question_path(@test), :method => :get %>
 

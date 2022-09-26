@@ -1,13 +1,12 @@
 class TestsController < ApplicationController
   before_action :find_test, only: %i[update edit show destroy]
-  before_action :new_test, only: %i[new]
-  before_action :find_questions, only: %i[show]
 
   def index
     @tests = Test.all
   end
 
   def show
+    @questions = @test.questions
   end
 
   def update
@@ -18,10 +17,10 @@ class TestsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def new
+    @test = Test.new
   end
 
   def destroy
@@ -40,14 +39,6 @@ class TestsController < ApplicationController
   end
 
   protected
-
-  def new_test
-    @test = Test.new
-  end
-
-  def find_questions
-    @questions = @test.questions
-  end
 
   def find_test
     @test = Test.find(params[:id])
