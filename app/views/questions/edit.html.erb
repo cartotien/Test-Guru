@@ -1,0 +1,5 @@
+<%= question_header @question %>
+
+<%= render 'form' %>
+
+<%= button_to "Back to Question", { :controller => :questions, :action => 'show' }, :method => :get  %>

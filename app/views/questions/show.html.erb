@@ -1,3 +1,5 @@
 <p><%= @question.body %></p>
 
-<%= button_to "delete", { :controller => :questions, :action => 'destroy' }, :method => :delete  %>
+<%= button_to "Back to Test", test_path(@question.test.id), :method => :get  %>
+<%= button_to "Edit", { :controller => :questions, :action => 'edit' }, :method => :get  %>
+<%= button_to "Delete", { :controller => :questions, :action => 'destroy' }, :method => :delete  %>
