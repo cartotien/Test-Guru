@@ -1,7 +1,9 @@
 module QuestionsHelper
-  VIEW_NAME = { :new => '<h1>Create New Question</h1>', :edit => '<h1>Update Question</h1>' }.freeze
-
-  def question_header(view)
-    VIEW_NAME[view].html_safe
+  def question_header(question)
+    if question.new_record?
+      "Create New Question for #{question.test.title}"
+    else
+      "Edit Question of #{question.test.title}"
+    end
   end
 end
