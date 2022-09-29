@@ -5,12 +5,9 @@
     <span>Category: <%= @test.category.title %></span>
   </div>
 
-  <table>
-    <th colspan="10">Question</th>
-    <th colspan="10">Actions</th>
-    <%= render @questions %>
-  </table>
+<h2>Questions</h2>
+  <%= render @questions %>  
 
-<%= button_to 'Back', tests_path, :method => :get %></span>
-<%= button_to 'Create Question', new_test_question_path(@test), :method => :get %>
+<%= link_to 'Back', tests_path, :method => :get %></span>
+<%= link_to 'Create Question', new_test_question_path(@test), :method => :get %>
 

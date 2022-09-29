@@ -1,0 +1,17 @@
+<%= form_with model: [@question, @answer] do |form| %>
+  <%= render 'shared/error_handle', resource: @answer %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+    <div class="field">
+    <%= form.label :correct %>
+    <%= form.check_box :correct %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

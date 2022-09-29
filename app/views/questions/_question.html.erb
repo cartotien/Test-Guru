@@ -1,8 +1,5 @@
-<tr>
-  <td><%= question.body %></td>
-  <td>
-      <td><%= button_to 'Show', question_path(question.id), :method => :get %></td>
-      <td><%= button_to 'Edit', edit_question_path(question.id), :method => :get %></td>
-      <td><%= button_to 'Delete', question_path(question.id), :method => :delete, data: { confirm: 'Are you sure?' } %></td>
-  </td> 
-</tr>
+<%= question.body %>
+  <%= link_to 'Show', question_path(question.id), :method => :get %>
+  <%= link_to 'Edit', edit_question_path(question.id), :method => :get %>
+  <%= link_to 'Delete', question_path(question.id), :method => :delete, data: { confirm: 'Are you sure?' } %><br>
+<%= render question.answers %>
