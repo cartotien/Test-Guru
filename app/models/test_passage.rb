@@ -1,4 +1,6 @@
 class TestPassage < ApplicationRecord
+  CORRECT_QUESTIONS_RATIO = 85
+
   belongs_to :test
   belongs_to :user
   belongs_to :current_question, class_name: "Question", optional: true
@@ -13,6 +15,10 @@ class TestPassage < ApplicationRecord
 
   def completed?
     current_question.nil?
+  end
+
+  def successful?
+    correct_question_percentage >= CORRECT_QUESTIONS_RATIO
   end
 
   def correct_question_percentage
@@ -34,7 +40,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort unless answer_ids.nil?
   end
 
   def correct_answers

@@ -1,9 +1,9 @@
 module TestPassageHelper
   def test_passage_result_header(test_passage)
-    if test_passage.correct_question_percentage >= 85
-      render inline: "<h2 style='color:green;'>You passed!</h2>"
+    if test_passage.successful?
+      "<h2 class='success'>You passed!</h2>".html_safe
     else
-      render inline: "<h2 style='color:red;'>You failed.</h2>"
+      "<h2 class='failure'>You failed.</h2>".html_safe
     end
   end
 end
