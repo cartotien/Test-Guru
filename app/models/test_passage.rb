@@ -56,6 +56,8 @@ class TestPassage < ApplicationRecord
   end
 
   def before_save_set_question
-    self.current_question.nil? ? self.current_question = first_question : self.current_question = next_question 
+    return self.current_question = first_question if current_question.nil?
+
+    self.current_question = next_question
   end
 end
