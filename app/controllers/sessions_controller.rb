@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate_user!
   def new; end
 
   def create
     user = User.find_by(email: params[:email])
 
     if user&.authenticate(params[:password])
-      @current_user = user
       session[:user_id] = user.id
       cookies[:path] ? (redirect_to cookies[:path]) : (redirect_to tests_path)
       cookies.delete :path
