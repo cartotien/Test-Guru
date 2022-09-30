@@ -16,8 +16,8 @@ categories = Category.create!(
 
 users = User.create!(
   [
-    { name: 'Peter', email: 'Peter@griffin.com' },
-    { name: 'Lois', email: 'Lois@griffin.com' }
+    { name: 'Peter', email: 'Peter@griffin.com', password_digest: "8de75e71a5fe5c344d7c4849816db191e6fb60c8" },
+    { name: 'Lois', email: 'Lois@griffin.com', password_digest: "8de75e71a5fe5c344d7c4849816db191e6fb60c8" }
   ]
 )
 

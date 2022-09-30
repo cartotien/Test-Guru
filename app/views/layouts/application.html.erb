@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <p class='nav'>
+        Welcome to <%= link_to 'Guru', root_path %> <b><%= current_user.name %></b>
+        <%= link_to 'Exit', exit_path, method: :post %>
+      </p>
+    <% elsif !logged_in? %>
+      <p class='nav'>
+        <%= link_to 'Signup', signup_path %>
+        <%= link_to 'Login', login_path %> 
+      </p>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

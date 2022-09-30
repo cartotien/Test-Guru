@@ -1,4 +1,6 @@
 class AnswersController < ApplicationController
+  before_action :current_user, only: %i[index show]
+  before_action :authenticate_user!, except: :show
   before_action :find_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
 

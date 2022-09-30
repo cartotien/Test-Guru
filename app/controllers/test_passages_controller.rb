@@ -1,8 +1,8 @@
 class TestPassagesController < ApplicationController
+  before_action :current_user, only: %i[index show result]
   before_action :set_test_passage, only: %i[result show update]
 
-  def result
-  end
+  def result; end
 
   def show
     @test = Test.find(@test_passage.test_id)

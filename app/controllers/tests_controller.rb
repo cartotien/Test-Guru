@@ -1,4 +1,6 @@
 class TestsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :current_user, only: %i[index show]
   before_action :find_test, only: %i[update edit show destroy start]
 
   def index
@@ -39,16 +41,12 @@ class TestsController < ApplicationController
   end
 
   def start
-    set_user
+    @user = current_user
     @user.tests.push(@test)
     redirect_to @user.test_passage(@test)
   end
 
   protected
-
-  def set_user
-    @user = User.first
-  end
 
   def find_test
     @test = Test.find(params[:id])

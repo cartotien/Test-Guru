@@ -3,5 +3,4 @@
 <%= link_to "Back to Test", test_path(@question.test.id), :method => :get  %>
 <%= link_to "Edit", { :controller => :questions, :action => 'edit' }, :method => :get  %>
 <%= link_to "Delete", { :controller => :questions, :action => 'destroy' }, :method => :delete  %>
-
 <%= render @question.answers %>
