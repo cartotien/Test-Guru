@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 
     member do
       post :start
-      get :start
     end
   end
 
