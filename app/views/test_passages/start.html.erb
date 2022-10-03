@@ -1,0 +1,7 @@
+<h1>Passing the <%= @test.title %></h1><hr>
+<div>
+  <span>Level: <%= @test.level %></span>
+  <span>Category: <%= @test.category.title %></span>
+</div><br>
+
+<%= button_to 'Start Test', start_test_path(@test) %>

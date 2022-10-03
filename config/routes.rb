@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     member do
       post :start
+      get :start, to: 'test_passages#start'
     end
   end
 

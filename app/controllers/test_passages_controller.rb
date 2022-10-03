@@ -4,6 +4,10 @@ class TestPassagesController < ApplicationController
 
   def result; end
 
+  def start
+    @test = Test.find(params[:id])
+  end
+
   def show
     @test = Test.find(@test_passage.test_id)
   end
