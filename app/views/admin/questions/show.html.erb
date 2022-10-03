@@ -1,0 +1,6 @@
+<p><%= @question.body %></p>
+
+<%= link_to "Back to Test", admin_test_path(@question.test.id), :method => :get  %>
+<%= link_to "Edit", edit_admin_question_path, :method => :get  %>
+<%= link_to "Delete", admin_question_path, :method => :delete  %>
+<%= render @question.answers %>

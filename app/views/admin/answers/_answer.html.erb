@@ -1,0 +1,6 @@
+<ol>
+  <%= answer.body %>
+  <%= link_to 'Show', admin_answer_path, method: :get %>
+  <%= link_to 'Edit', edit_admin_answer_path(answer), method: :get %>
+  <%= link_to 'Destroy', admin_answer_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+</ol>

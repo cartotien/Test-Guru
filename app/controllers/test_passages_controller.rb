@@ -1,5 +1,4 @@
 class TestPassagesController < ApplicationController
-  before_action :current_user
   before_action :set_test_passage, only: %i[result show update]
 
   def result; end

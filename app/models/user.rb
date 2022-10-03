@@ -1,5 +1,13 @@
 class User < ApplicationRecord
-  include Auth
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable,
+         :confirmable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable
+  # include Auth
 
   has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
   has_many :test_passages, dependent: :destroy
