@@ -7,11 +7,11 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
 
   devise :database_authenticatable,
-  :confirmable,
-  :registerable,
-  :recoverable,
-  :rememberable,
-  :validatable
+         :confirmable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable
 
   def passed_tests_by_level(level)
     tests.where(level: level)
