@@ -6,11 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
-    admin? ? admin_tests_path : root_path
-  end
-
-  def admin?
-    current_user.is_a? Admin
+    current_user.admin? ? admin_tests_path : root_path
   end
 
   def configure_permitted_parameters
@@ -18,6 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def hello_flash_message
-    flash[:notice] = "Привет, #{current_user.first_name}!" if current_user
+    flash[:notice] = "Привет, #{current_user.first_name}!" if current_user.first_name
   end
 end
