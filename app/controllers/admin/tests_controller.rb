@@ -38,11 +38,6 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
-
   protected
 
   def set_test
@@ -50,6 +45,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:author_id, :title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end
