@@ -16,8 +16,8 @@ categories = Category.create!(
 
 users = User.create!(
   [
-    { name: 'Peter', email: 'Peter@griffin.com', password_digest: "8de75e71a5fe5c344d7c4849816db191e6fb60c8" },
-    { name: 'Lois', email: 'Lois@griffin.com', password_digest: "8de75e71a5fe5c344d7c4849816db191e6fb60c8" }
+    { first_name: 'Peter', last_name: 'Griffin', email: 'Peter@griffin.com', encrypted_password: "8de75e71a5fe5c344d7c4849816db191e6fb60c8", password: 'Stewie', type: 'Admin' },
+    { first_name: 'Lois', last_name: 'Griffin', email: 'Lois@griffin.com', encrypted_password: "8de75e71a5fe5c344d7c4849816db191e6fb60c8", password: 'Stewie', type: 'Admin' }
   ]
 )
 

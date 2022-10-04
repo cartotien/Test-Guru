@@ -1,0 +1,12 @@
+
+<h2><%= @test.title %></h2><hr>
+  <div>
+    <span>Level: <%= @test.level %></span>
+    <span>Category: <%= @test.category.title %></span>
+  </div>
+
+<h2>Questions</h2>
+  <%= render @questions %>  
+
+<%= link_to 'Back', admin_tests_path, :method => :get %></span>
+<%= link_to 'Create Question', new_test_question_path(@test), :method => :get %>

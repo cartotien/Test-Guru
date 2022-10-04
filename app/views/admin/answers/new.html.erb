@@ -1,0 +1,5 @@
+<h1>New Answer</h1>
+
+<%= render 'form', answer: @answer %>
+
+<%= button_to 'Back', admin_test_path(@answer.question.test), method: :get %>
