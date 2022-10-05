@@ -10,6 +10,6 @@ module ApplicationHelper
   end
 
   def bootstrap_flash_color(key)
-    BOOTSTRAP_COLORS[key] || 'primary'
+    BOOTSTRAP_COLORS[key.to_sym] || 'primary'
   end
 end
