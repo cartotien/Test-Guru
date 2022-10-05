@@ -2,4 +2,4 @@
 
 <%= render 'form', answer: @answer %>
 
-<%= button_to 'Back', admin_test_path(@answer.question.test), method: :get %>
+<%= link_to t('back'), admin_test_path(@answer.question.test), method: :get %>

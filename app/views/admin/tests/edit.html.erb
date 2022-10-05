@@ -1,5 +1,5 @@
-<h1>Update Test</h1>
+<h1><%= t('.header') %></h1>
 
 <%= render 'form' %>
 
-<%= button_to "Back to Tests", admin_tests_path, :method => :get  %>
+<%= link_to t('back'), admin_tests_path, :method => :get  %>

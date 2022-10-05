@@ -1,10 +1,10 @@
 <div class='nav'>
   <span>
-    Admin Panel
+    <%= t('.admin_panel') %>
   </span>
 
   <p>
-    Welcome to <%= link_to 'Guru' %>, Admin <b><%= current_user.email %></b> |
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <%= t('.welcome_to') %> <%= link_to 'Guru' %>, <%= t('.admin') %> <b><%= current_user.email %></b> |
+    <%= link_to t('logout'), destroy_user_session_path, method: :delete %>
   </p>
 </div>
