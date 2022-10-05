@@ -1,12 +1,57 @@
 ---
 ru:
+  show: 'Посмотреть'
+  edit: 'Редактировать'
+  delete: 'Удалить'
+  sure?: 'Вы уверены?'
+  back: 'Назад'
+  logout: 'Выйти'
+  signup: 'Регистрация'
+  login: 'Войти'
+  start: 'Начать'
   activerecord:
+    attributes:
+      question:
+        body: 'Вопрос'
+      answer:
+        correct: 'Правильный'
+        body: 'Ответ'
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
     errors:
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'
         restrict_dependent_destroy:
           has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
           has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+    models:
+      test: 'Тест'
+      question: 'Вопрос'
+      user: 'Пользователь'
+      answer: 'Ответ'
+  admin:
+    navbar:
+      admin_panel: 'Админская панель'
+      welcome_to: 'Добро пожаловать в'
+      admin: 'Администратор'
+    tests:
+      index:
+        title: 'Название'
+        level: 'Уровень'
+        questions: 'Вопросы'
+        actions: 'Действия'
+        new_test: 'Создать Тест'
+      show: 
+        level: 'Уровень'
+        category: 'Категория'
+        questions: 'Вопросы'
+        create_question: 'Создать Вопрос'
+      edit:
+        header: 'Обновить Тест'
+      new:
+        header: 'Создать Тест'
   date:
     abbr_day_names:
     - Вс
@@ -183,6 +228,8 @@ ru:
       create: Создать %{model}
       submit: Сохранить %{model}
       update: Сохранить %{model}
+  layouts:
+    footer: 
   number:
     currency:
       format:
@@ -260,6 +307,12 @@ ru:
       last_word_connector: " и "
       two_words_connector: " и "
       words_connector: ", "
+  tests:
+    index:
+      title: 'Название'
+      level: 'Уровень'
+      questions: 'Вопросы'
+      actions: 'Действия'
   time:
     am: утра
     formats:

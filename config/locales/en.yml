@@ -28,6 +28,40 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  show: 'Show'
+  edit: 'Edit'
+  delete: 'Delete'
+  sure?: 'Are you sure?'
+  back: 'Back'
+  logout: 'Logout'
+  signup: 'Sign up'
+  login: 'Login'
+  start: 'Start'
+  admin:
+    navbar:
+      admin_panel: 'Admin Panel'
+      welcome_to: 'Welcome to'
+      admin: 'Admin'
+    tests:
+      index:
+        title: 'Title'
+        level: 'Level'
+        questions: 'Questions'
+        actions: 'Actions'
+        new_test: 'New Test'
+      show: 
+        level: 'Level'
+        category: 'Category'
+        questions: 'Question'
+        create_question: 'Create Question'
+      edit:
+        header: 'Update Test'
+      new:
+        header: 'Create Test'
+  tests:
+    index:
+        title: 'Title'
+        level: 'Level'
+        questions: 'Questions'
+        actions: 'Actions'
