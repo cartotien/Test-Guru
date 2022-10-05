@@ -9,6 +9,7 @@ ru:
   signup: 'Регистрация'
   login: 'Войти'
   start: 'Начать'
+  welcome: "Добро пожаловать"
   activerecord:
     attributes:
       question:
@@ -34,7 +35,6 @@ ru:
   admin:
     navbar:
       admin_panel: 'Админская панель'
-      welcome_to: 'Добро пожаловать в'
       admin: 'Администратор'
     tests:
       index:
