@@ -75,3 +75,5 @@ en:
     gist:
       success: "Gist was sent successfully. Link: %{link}"
       failure: "Error occured while saving gist"
+    show:
+      gist_question: 'Gist Question'

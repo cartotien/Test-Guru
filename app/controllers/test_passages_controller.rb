@@ -1,5 +1,5 @@
 class TestPassagesController < ApplicationController
-  before_action :set_test_passage, only: %i[result show update gist]
+  before_action :set_test_passage, except: :start
 
   def result; end
 

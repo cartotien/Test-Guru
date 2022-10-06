@@ -323,6 +323,8 @@ ru:
     gist:
       success: "Gist успешно отправлен. Ссылка %{link}"
       failure: "Во время сохранения gist возникла ошибка"
+    show:
+      gist_question: 'Отправить Gist'
   time:
     am: утра
     formats:
