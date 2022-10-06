@@ -38,10 +38,10 @@ en:
   signup: 'Sign up'
   login: 'Login'
   start: 'Start'
+  welcome: 'Welcome'
   admin:
     navbar:
       admin_panel: 'Admin Panel'
-      welcome_to: 'Welcome to'
       admin: 'Admin'
     tests:
       index:
