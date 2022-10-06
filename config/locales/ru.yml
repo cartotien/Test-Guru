@@ -1,5 +1,6 @@
 ---
 ru:
+  gist_description: 'Вопрос о %{test_title} из TestGuru'
   show: 'Посмотреть'
   edit: 'Редактировать'
   delete: 'Удалить'
@@ -52,6 +53,11 @@ ru:
         header: 'Обновить Тест'
       new:
         header: 'Создать Тест'
+    gists:
+      index: 
+        question: "Вопрос"
+        user: "Пользователь"
+        url: "Ссылка"
   date:
     abbr_day_names:
     - Вс
@@ -313,6 +319,10 @@ ru:
       level: 'Уровень'
       questions: 'Вопросы'
       actions: 'Действия'
+  test_passages:
+    gist:
+      success: "Gist успешно отправлен. Ссылка %{link}"
+      failure: "Во время сохранения gist возникла ошибка"
   time:
     am: утра
     formats:

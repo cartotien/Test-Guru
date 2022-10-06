@@ -2,6 +2,7 @@
   <%= link_to 'Test Guru', root_path, class: 'navbar-brand' %>
   <ul class="navbar-nav ml-auto">
       <p>
+        <%= link_to 'Gists', admin_gists_path %>
         <%= t('.admin_panel') %> |
         <%= t('.admin') %> 
         <b><%= current_user.email %></b> |

@@ -29,6 +29,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 en:
+  gist_description: 'Question about %{test_title} from TestGuru'
   show: 'Show'
   edit: 'Edit'
   delete: 'Delete'
@@ -59,9 +60,18 @@ en:
         header: 'Update Test'
       new:
         header: 'Create Test'
+    gists:
+      index: 
+        question: "Question"
+        user: "User"
+        url: "Link"
   tests:
     index:
         title: 'Title'
         level: 'Level'
         questions: 'Questions'
         actions: 'Actions'
+  test_passages:
+    gist:
+      success: "Gist was sent successfully. Link: %{link}"
+      failure: "Error occured while saving gist"
