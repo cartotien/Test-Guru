@@ -72,8 +72,10 @@ en:
         questions: 'Questions'
         actions: 'Actions'
   test_passages:
-    gist:
-      success: "Gist was sent successfully. Link: %{link}"
-      failure: "Error occured while saving gist"
     show:
       gist_question: 'Gist Question'
+  gists:
+    create:
+      gist_link: 'Gist Link'
+      success: "Gist was sent successfully. %{link}"
+      failure: "Error occured while saving gist"

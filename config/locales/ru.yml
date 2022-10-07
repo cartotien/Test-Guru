@@ -320,11 +320,13 @@ ru:
       questions: 'Вопросы'
       actions: 'Действия'
   test_passages:
-    gist:
-      success: "Gist успешно отправлен. Ссылка %{link}"
-      failure: "Во время сохранения gist возникла ошибка"
     show:
       gist_question: 'Отправить Gist'
+  gists:
+    create:
+      gist_link: 'Ссылка на Gist'
+      success: "Gist успешно отправлен. %{link}"
+      failure: "Во время сохранения gist возникла ошибка"
   time:
     am: утра
     formats:
