@@ -6,8 +6,6 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
   has_many :gists, dependent: :destroy
-  has_many :users, through: :gists
-
 
   devise :database_authenticatable,
          :confirmable,
