@@ -4,6 +4,7 @@ document.addEventListener('turbolinks:load', function() {
   if (passwordConfirmation) {
 
     passwordConfirmation.addEventListener('input', function() {
+      
       var container = document.querySelector('div.container')
       var password = document.querySelector("input[name='user[password]']")
       var paragraph = document.querySelector('p.flash')
@@ -23,8 +24,8 @@ document.addEventListener('turbolinks:load', function() {
   
         paragraph.appendChild(text)
         container.parentNode.insertBefore(paragraph, container)
-        
-      } else { if (paragraph) { container.parentNode.removeChild(paragraph) } }
+
+      } else { container.parentNode.removeChild(paragraph) }
     })
   }
 })

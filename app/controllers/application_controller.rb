@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def hello_flash_message
-    flash[:notice] = "Привет, #{current_user.first_name}!" if current_user.first_name.present?
+    flash[:notice] = "Привет, #{current_user.first_name}!" if current_user&.first_name.present?
   end
 
   def set_locale
