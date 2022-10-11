@@ -8,10 +8,9 @@ document.addEventListener('turbolinks:load', function() {
       var container = document.querySelector('div.container')
       var password = document.querySelector("input[name='user[password]']")
       var paragraph = document.querySelector('p.flash')
-     
-      if (passwordConfirmation.value) {
+      if (paragraph) { container.parentNode.removeChild(paragraph) }
 
-        if (paragraph) { container.parentNode.removeChild(paragraph) }
+      if (passwordConfirmation.value) {
         var paragraph = document.createElement('p')
   
         if ( password.value !== passwordConfirmation.value ) {
@@ -24,8 +23,7 @@ document.addEventListener('turbolinks:load', function() {
   
         paragraph.appendChild(text)
         container.parentNode.insertBefore(paragraph, container)
-
-      } else { container.parentNode.removeChild(paragraph) }
+      } 
     })
   }
 })
