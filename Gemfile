@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # STYLING
 gem 'bootstrap'
+gem 'octicons_helper'
 gem 'jquery-rails'
 # NETWORKING
 gem 'octokit'

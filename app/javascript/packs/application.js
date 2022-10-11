@@ -9,7 +9,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
-
+import "utilities/sorting.js"
+import "utilities/password_input_validation.js"
 
 Rails.start()
 Turbolinks.start()
