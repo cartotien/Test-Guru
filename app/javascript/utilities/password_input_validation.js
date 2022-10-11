@@ -1,30 +1,45 @@
-document.addEventListener('turbolinks:load', function() {
+class PasswordValidation {
+  constructor(form) {
+    this.form = form
+    this.password = form.user_password
+    this.password_confirmation = form.user_password_confirmation
+    this.container = document.querySelector('div.container')
 
-  var passwordConfirmation = document.querySelector("input[name='user[password_confirmation]']")
-  if (passwordConfirmation) {
+    this.setup()
+  }
 
-    passwordConfirmation.addEventListener('input', function() {
-      
-      var container = document.querySelector('div.container')
-      var password = document.querySelector("input[name='user[password]']")
-      var paragraph = document.querySelector('p.flash')
-      if (paragraph) { container.parentNode.removeChild(paragraph) }
+  resetParagraph() {
+    let paragraph = document.querySelector('p.flash')
+    if (paragraph) { this.container.parentNode.removeChild(paragraph) }
+  }
 
-      if (passwordConfirmation.value) {
-        var paragraph = document.createElement('p')
+  checkPasswords() {
+
+    this.resetParagraph()
+
+    let paragraph = document.createElement('p')
   
-        if ( password.value !== passwordConfirmation.value ) {
-          var text = document.createTextNode("Passwords don't match!")
-          paragraph.classList.add('flash', 'alert')
-        } else {
-          var text = document.createTextNode("Passwords match.")
-          paragraph.classList.add('flash', 'notice')
-        }
-  
-        paragraph.appendChild(text)
-        container.parentNode.insertBefore(paragraph, container)
-      } 
+    if (this.password.value !== this.password_confirmation.value) {
+      this.textNode = document.createTextNode("Passwords don't match!")
+      paragraph.classList.add('flash', 'alert') }
+      else {
+      this.textNode = document.createTextNode("Passwords match.")
+      paragraph.classList.add('flash', 'notice') }
+    
+
+    paragraph.appendChild(this.textNode)
+    this.container.parentNode.insertBefore(paragraph, this.container)
+  }
+
+  setup() {
+    this.form.addEventListener('keyup', event => {
+      if (this.password.value != '' && this.password_confirmation.value != '') this.checkPasswords()
+      else this.resetParagraph()
     })
   }
-})
+}
 
+document.addEventListener('turbolinks:load', function() {
+  const reg_form = document.getElementById('new_user')
+  if (reg_form) new PasswordValidation(reg_form)
+})
