@@ -1,6 +1,7 @@
 class RowSort {
   constructor() {
     this.control = document.querySelector('.sort-by-title')
+
     this.setup()
   }
 
@@ -8,13 +9,11 @@ class RowSort {
     this.control.addEventListener('click', event => { this.sortRows() })
   }
 
-
   sortRows() {
     let table = document.querySelector('table')
 
     let rows = table.querySelectorAll('tr')
     let sortedRows = []
-
 
     for (let i = 1; i < rows.length; i++) {
       sortedRows.push(rows[i])
