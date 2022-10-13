@@ -44,6 +44,8 @@ ru:
         questions: 'Вопросы'
         actions: 'Действия'
         new_test: 'Создать Тест'
+      form_inline:
+        submit: 'OK'
       show: 
         level: 'Уровень'
         category: 'Категория'

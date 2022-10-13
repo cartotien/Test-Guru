@@ -30,8 +30,9 @@ class RowSort {
     }
   
     let sortedTable = document.createElement('table')
-  
-    sortedTable.classList.add('table', 'table-primary', 'table-striped')
+    
+    sortedTable.classList.add('table')
+    
     sortedTable.appendChild(rows[0])
   
     for (let i = 0; i < sortedRows.length; i++) {

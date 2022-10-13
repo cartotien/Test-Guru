@@ -51,6 +51,8 @@ en:
         questions: 'Questions'
         actions: 'Actions'
         new_test: 'New Test'
+      form_inline:
+        submit: 'OK'
       show: 
         level: 'Level'
         category: 'Category'
