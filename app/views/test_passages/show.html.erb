@@ -1,10 +1,12 @@
 <h1>Passing the <%= @test_passage.test.title %></h1><hr>
 <div>
-  <span>Level: <%= @test_passage.test.level %></span>
+  <span>Level: <%= @test_passage.test.level %></span> |
   <span>Category: <%= @test_passage.test.category.title %></span>
+  <%= content_tag :span, class: 'progress-bar', 
+  data: { current_question_number: @test_passage.current_question_number, number_of_questions: @test_passage.number_of_questions } do %>
+  <% end %>
 </div><br>
 
-<p>Question <%= @test_passage.current_question_number %> out of <%= @test_passage.number_of_questions %></p>
 
 <b><%= @test_passage.current_question.body %></b>
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form|%>

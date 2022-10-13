@@ -11,6 +11,9 @@ import "channels"
 import "bootstrap"
 import "utilities/sorting.js"
 import "utilities/password_input_validation.js"
+import "utilities/form_inline.js"
+import "utilities/progress_bar.js"
+import 'jquery'
 
 Rails.start()
 Turbolinks.start()
