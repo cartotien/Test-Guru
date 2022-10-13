@@ -30,7 +30,7 @@ document.addEventListener('turbolinks:load', function() {
     new InlineEditForm(event, this)
   })
 
-  let errors = document.querySelector('.resource-errors')
+  const errors = document.querySelector('.resource-errors')
 
   if (errors) {
     let resourceId = errors.dataset.resourceId

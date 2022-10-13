@@ -2,8 +2,10 @@
 <div>
   <span>Level: <%= @test_passage.test.level %></span> |
   <span>Category: <%= @test_passage.test.category.title %></span>
-  <%= content_tag :span, class: 'progress-bar', 
-  data: { current_question_number: @test_passage.current_question_number, number_of_questions: @test_passage.number_of_questions } do %>
+  <%= content_tag :span, 
+                  class: 'progress-bar align-middle', 
+                  data: { current_question_number: @test_passage.current_question_number, 
+                          number_of_questions: @test_passage.number_of_questions } do %>
   <% end %>
 </div><br>
 
