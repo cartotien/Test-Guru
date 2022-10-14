@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: :create
   resources :sessions, only: :create
+  resources :feedbacks, only: %i[new create]
 
   resources :tests do
     resources :questions, shallow: true, except: :index do

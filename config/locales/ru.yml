@@ -22,6 +22,9 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category: 'Категория'
+      feedback:
+        title: 'Тема'
+        body: 'Сообщение'
     errors:
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'
@@ -229,6 +232,14 @@ ru:
         few: "%{model}: сохранение не удалось из-за %{count} ошибок"
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
+  feedbacks:
+    form:
+      send: "Отправить"
+    create:
+      success: "Обратная связь успешно отправлена"
+    new:
+     feedback_header: 'Форма обратной связи'
+  
   helpers:
     select:
       prompt: 'Выберите: '

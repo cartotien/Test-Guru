@@ -81,3 +81,10 @@ en:
       gist_link: 'Gist Link'
       success: "Gist was sent successfully. %{link}"
       failure: "Error occured while saving gist"
+  feedbacks:
+    form:
+      send: "Send"
+    create:
+      success: "Feedback sent successfully"
+    new:
+     feedback_header: 'Feedback'
