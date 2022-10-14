@@ -11,7 +11,7 @@ class Admin::AnswersController < Admin::BaseController
   def edit; end
 
   def create
-    @answer = @question.answers.build
+    @answer = @question.answers.build(answer_params)
 
     if @answer.save
       redirect_to admin_test_path(@answer.question.test), notice: "Answer was successfully created." 

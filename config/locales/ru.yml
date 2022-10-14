@@ -63,6 +63,12 @@ ru:
         question: "Вопрос"
         user: "Пользователь"
         url: "Ссылка"
+    questions:
+      show:
+        create_answer: 'Создать Ответ'
+    answers:
+      new:
+        header: 'Новый Ответ'
   date:
     abbr_day_names:
     - Вс

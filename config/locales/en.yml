@@ -67,6 +67,12 @@ en:
         question: "Question"
         user: "User"
         url: "Link"
+    questions:
+      show:
+        create_answer: 'Create Answer'
+    answers:
+      new:
+        header: 'New Answer'
   tests:
     index:
         title: 'Title'
