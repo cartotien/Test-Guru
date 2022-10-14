@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "~bootstrap/scss/bootstrap";
+ 
+@import "bootstrap/scss/bootstrap.scss";
 @import 'app/assets/stylesheets/typography/';
 @import 'app/assets/stylesheets/global.scss';
 @import 'app/assets/stylesheets/flash.scss'
