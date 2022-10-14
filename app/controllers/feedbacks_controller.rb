@@ -6,6 +6,7 @@ class FeedbacksController < ApplicationController
   def create
     @feedback = current_user.feedbacks.build(feedback_params)
     if @feedback.save
+      FeedbackMailer.feedback(@feedback).deliver_now
       redirect_to root_path, notice: t('.success')
     else
       render :new
