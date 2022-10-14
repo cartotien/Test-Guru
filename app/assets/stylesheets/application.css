@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-  @import 'bootstrap';
   @import '/typography/icons.scss';
   @import 'global.scss';
   @import 'flash.scss'
