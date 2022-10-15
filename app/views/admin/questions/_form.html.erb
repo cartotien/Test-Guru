@@ -1,12 +1,16 @@
-<%= form_with model: [:admin, @test, @question], local: true do |form| %>
+<div class='container'>
+  <%= form_with model: [:admin, @test, @question], local: true do |form| %>
+    <%= render 'shared/error_handle', resource: @question %>
 
-  <%= render 'shared/error_handle', resource: @question %>
-
-  <p>
+  <div>
     <%= form.label :body %>
-    <%= form.text_area :body %>
-  </p>
+    <%= form.text_area :body, class: 'form-control' %><br>
+    
+    <div>
+      <%= form.submit %>
+      <%= link_to t('back'), admin_question_path(@question), class: "btn btn-secondary btn-sm"  %>
+    </div>
+  </div>
 
-  <p><%= form.submit %></p>
-
-<% end %>
+  <% end %>
+</div>

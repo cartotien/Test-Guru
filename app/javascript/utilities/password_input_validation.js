@@ -1,8 +1,8 @@
 class PasswordValidation {
   constructor(form) {
     this.form = form
-    this.password = form.user_password
-    this.password_confirmation = form.user_password_confirmation
+    this.password = form.user_registration_password
+    this.password_confirmation = form.user_registration_password_confirmation
     this.container = document.querySelector('div.container')
 
     this.setup()
@@ -40,6 +40,6 @@ class PasswordValidation {
 }
 
 document.addEventListener('turbolinks:load', function() {
-  const reg_form = document.getElementById('new_user')
+  const reg_form = document.getElementById('new_user_registration')
   if (reg_form) new PasswordValidation(reg_form)
 })
