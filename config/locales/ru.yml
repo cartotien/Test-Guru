@@ -19,6 +19,7 @@ ru:
   forgot_password: "Забыли пароль?"
   confirmation_instructions: "Не получили письмо с подтверждением?"
   unlock_instructions: "Не получили инструкции по разблокировке?"
+  instructions: "Отправить письмо"
   activerecord:
     attributes:
       question:

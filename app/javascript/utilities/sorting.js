@@ -37,7 +37,7 @@ class RowSort {
       sortedTable.appendChild(sortedRows[i])
     }
 
-    sortedTable.classList.add('table')
+    sortedTable.classList.add('table', 'table-bordered')
 
     table.parentNode.replaceChild(sortedTable, table)
   }

@@ -57,6 +57,7 @@ en:
   forgot_password: "Forgot your password?"
   confirmation_instructions: "Didn't receive confirmation instructions?"
   unlock_instructions: "Didn't receive unlock instructions?"
+  instructions: "Send instructions"
   optional: '(Optional)'
   characters_minimum: 'characters minimum)'
   you_passed: 'You passed!'
