@@ -1,7 +1,7 @@
-<h1>Passing the <%= @test_passage.test.title %></h1><hr>
+<h1><%= t('.passing') %> <%= @test_passage.test.title %></h1><hr>
 <div>
-  <span>Level: <%= @test_passage.test.level %></span> |
-  <span>Category: <%= @test_passage.test.category.title %></span>
+  <span><%= t('.level') %> <%= @test_passage.test.level %></span> |
+  <span><%= t('.category') %> <%= @test_passage.test.category.title %></span>
   <%= content_tag :span, 
                   class: 'progress-bar align-middle', 
                   data: { current_question_number: @test_passage.current_question_number, 
@@ -19,6 +19,6 @@
     </p>
   <% end %>
   <%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post %>
-  <p><%= form.submit "Next" %></p>
+  <p><%= form.submit t('next') %></p>
 <% end %>
 

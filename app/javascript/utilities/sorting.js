@@ -31,14 +31,14 @@ class RowSort {
   
     let sortedTable = document.createElement('table')
     
-    sortedTable.classList.add('table')
-    
     sortedTable.appendChild(rows[0])
   
     for (let i = 0; i < sortedRows.length; i++) {
       sortedTable.appendChild(sortedRows[i])
     }
-  
+
+    sortedTable.classList.add('table', 'table-bordered')
+
     table.parentNode.replaceChild(sortedTable, table)
   }
 

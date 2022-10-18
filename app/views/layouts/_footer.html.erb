@@ -1,8 +1,11 @@
-<nav class="navbar fixed-bottom navbar-light bg-light px-3">
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <%= current_year %> | Dmitry Lyutsko | <%= github_url('cartotien', 'Test-Guru')  %> | 
-      <%= link_to 'School Site', 'http://thinknetica.com/', rel: 'no-follow', target: :blank %>
-    </li>
-  </ul>
-</nav>
+<div class='pb-5'>
+  <footer class="d-flex flex-wrap fixed-bottom bg-light border-top mt-2">
+    <ul class="navbar-nav ml-auto mx-3 ">
+      <li class="nav-item">
+        <%= current_year %> | Dmitry Lyutsko | <%= github_url('cartotien', 'Test-Guru')  %> | 
+        <%= link_to 'School Site', 'http://thinknetica.com/', rel: 'no-follow', target: :blank %> |
+        <%= link_to 'Feedback', new_feedback_path %>
+      </li>
+    </ul>
+  </footer>
+</div>

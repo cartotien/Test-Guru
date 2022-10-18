@@ -1,6 +1,6 @@
   <% if resource&.errors.present? %>
     <%= content_tag :div, class: 'resource-errors', data: { resource_id: resource.id } do %>
-      <h2><%= pluralize(resource.errors.count, 'error') %> detected: </h2>
+      <h2><%= t('errors.template.header.few', count: resource.errors.count, model: t("activerecord.models.#{resource.class.to_s.downcase}")) %></h2>
 
       <ul>
         <% resource.errors.full_messages.each do |error_message| %>

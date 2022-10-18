@@ -1,17 +1,18 @@
-<%= form_with model: [:admin, @question, @answer] do |form| %>
-  <%= render 'shared/error_handle', resource: @answer %>
+<div class='container'>
+  <%= form_with model: [:admin, @question, @answer] do |form| %>
+    <%= render 'shared/error_handle', resource: @answer %>
+    <div>
+      <%= form.label :body %>
+      <%= form.text_area :body, class: 'form-control' %>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+      <%= form.label :correct %>
+      <%= form.check_box :correct %>
+    </div><br>
 
-    <div class="field">
-    <%= form.label :correct %>
-    <%= form.check_box :correct %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div>
+      <%= form.submit %>
+      <%= link_to t('back'), admin_test_path(@answer.question.test), method: :get, class: "btn btn-secondary btn-sm" %>
+      <%= link_to t('show'), admin_answer_path, method: :get, class: "btn btn-secondary btn-sm" %> 
+    </div>
 <% end %>
+</div>

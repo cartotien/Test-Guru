@@ -29,6 +29,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 en:
+  activerecord:
+    attributes:
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
+    models:
+      test: 'Test'
+      question: 'Question'
+      answer: 'Answer'
+      user: 'User'
   gist_description: 'Question about %{test_title} from TestGuru'
   show: 'Show'
   edit: 'Edit'
@@ -40,6 +53,15 @@ en:
   login: 'Login'
   start: 'Start'
   welcome: 'Welcome'
+  next: 'Next'
+  forgot_password: "Forgot your password?"
+  confirmation_instructions: "Didn't receive confirmation instructions?"
+  unlock_instructions: "Didn't receive unlock instructions?"
+  instructions: "Send instructions"
+  optional: '(Optional)'
+  characters_minimum: 'characters minimum)'
+  you_passed: 'You passed!'
+  you_failed: 'You failed'
   admin:
     navbar:
       admin_panel: 'Admin Panel'
@@ -67,6 +89,16 @@ en:
         question: "Question"
         user: "User"
         url: "Link"
+    questions:
+      show:
+        create_answer: 'Create Answer'
+      edit:
+        header: 'Edit Question'
+    answers:
+      new:
+        header: 'New Answer'
+      edit:
+        header: 'Edit Answer'
   tests:
     index:
         title: 'Title'
@@ -76,8 +108,24 @@ en:
   test_passages:
     show:
       gist_question: 'Gist Question'
+      passing: 'Passing the'
+      level: 'Level:'
+      category: 'Category:'
+    result:
+      was_completed: 'was completed!'
   gists:
     create:
       gist_link: 'Gist Link'
       success: "Gist was sent successfully. %{link}"
       failure: "Error occured while saving gist"
+  feedbacks:
+    form:
+      send: "Send"
+    create:
+      success: "Feedback sent successfully"
+    new:
+     feedback_header: 'Feedback'
+  errors:
+    template:
+      header:
+        few: "%{model}: %{count} errors detected:"

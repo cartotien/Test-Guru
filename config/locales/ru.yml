@@ -11,6 +11,15 @@ ru:
   login: 'Войти'
   start: 'Начать'
   welcome: "Добро пожаловать"
+  next: 'Следующий'
+  you_passed: 'Тест пройден!'
+  you_failed: 'Тест не пройден.'
+  optional: '(По желанию)'
+  characters_minimum: 'символов минимум)'
+  forgot_password: "Забыли пароль?"
+  confirmation_instructions: "Не получили письмо с подтверждением?"
+  unlock_instructions: "Не получили инструкции по разблокировке?"
+  instructions: "Отправить письмо"
   activerecord:
     attributes:
       question:
@@ -22,6 +31,15 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category: 'Категория'
+      feedback:
+        title: 'Тема'
+        body: 'Сообщение'
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить меня'
     errors:
       messages:
         record_invalid: 'Возникли ошибки: %{errors}'
@@ -60,6 +78,16 @@ ru:
         question: "Вопрос"
         user: "Пользователь"
         url: "Ссылка"
+    questions:
+      show:
+        create_answer: 'Создать Ответ'
+      edit:
+        header: 'Редактировать Ответ'
+    answers:
+      new:
+        header: 'Новый Ответ'
+      edit:
+        header: 'Редактирование Ответа'
   date:
     abbr_day_names:
     - Вс
@@ -97,7 +125,7 @@ ru:
       short: "%-d %b"
     month_names:
     - 
-    - января
+    - assing the января
     - февраля
     - марта
     - апреля
@@ -229,6 +257,14 @@ ru:
         few: "%{model}: сохранение не удалось из-за %{count} ошибок"
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
+  feedbacks:
+    form:
+      send: "Отправить"
+    create:
+      success: "Обратная связь успешно отправлена"
+    new:
+     feedback_header: 'Форма обратной связи'
+  
   helpers:
     select:
       prompt: 'Выберите: '
@@ -324,6 +360,11 @@ ru:
   test_passages:
     show:
       gist_question: 'Отправить Gist'
+      passing: 'Проходим'
+      level: 'Уровень:'
+      category: 'Категория:'
+    result:
+      was_completed: 'был пройден!'
   gists:
     create:
       gist_link: 'Ссылка на Gist'

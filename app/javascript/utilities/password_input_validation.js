@@ -40,6 +40,9 @@ class PasswordValidation {
 }
 
 document.addEventListener('turbolinks:load', function() {
-  const reg_form = document.getElementById('new_user')
-  if (reg_form) new PasswordValidation(reg_form)
+  const reg_class = document.getElementById('registration-form')
+  if (reg_class) { 
+    const reg_form = reg_class.querySelector('.new_user')
+    if (reg_form) new PasswordValidation(reg_form) 
+}
 })
