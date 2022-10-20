@@ -15,13 +15,13 @@ class BadgeService
   end
 
   def all_tests_in_category?(category)
-    return unless @test_passage.test.category.title == category
+    return false unless @test_passage.test.category.title == category
 
     @user.test_passages.correct_tests_within_category(category).pluck('DISTINCT test_id').count == Test.by_category(category).count
   end
 
   def all_tests_with_level?(level)
-    return unless @test_passage.test.level == level
+    return false unless @test_passage.test.level == level.to_i
 
     @user.test_passages.correct_tests_within_level(level.to_i).pluck('DISTINCT test_id').count == Test.by_level(level).count
   end
