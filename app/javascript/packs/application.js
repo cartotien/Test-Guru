@@ -14,7 +14,6 @@ import "utilities/form_inline.js"
 import "utilities/progress_bar.js"
 import 'jquery'
 import "../stylesheets/application"
-const images = require.context('../images', true)
 
 Rails.start()
 Turbolinks.start()

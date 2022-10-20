@@ -1,5 +1,5 @@
 <tr>
-  <td class='align-middle'><%= badge.image_url.capitalize != 'None' ? (image_pack_tag badge.image_url, class: 'img-thumbnail w-25') : (badge.image_url) %></td>
+  <td class='align-middle'><%= badge.image_url.capitalize != 'None' ? (image_tag badge.image_url, class: 'img-thumbnail w-25') : (badge.image_url) %></td>
   <td class='align-middle'><%= link_to badge.name, admin_badge_path(badge) %></td>
   
   <td class='align-middle'><%= link_to t('.edit'), edit_admin_badge_path(badge) %></td>
