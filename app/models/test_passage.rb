@@ -6,6 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: "Question", optional: true
   before_update :before_update_set_successful
   before_save :before_save_set_question
+  before_commit :set_badges, if: :successful?
 
   scope :successful_passages, -> { where(successful: true) }
   scope :correct_tests_within_category, ->(category) { joins(:test)
@@ -45,6 +46,10 @@ class TestPassage < ApplicationRecord
   end
 
   protected
+
+  def set_badges
+    BadgeService.new(self).call
+  end
 
   def first_question
     test.questions.first
