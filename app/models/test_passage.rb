@@ -44,10 +44,6 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
-  def test_category
-    test.category
-  end
-
   protected
 
   def first_question
