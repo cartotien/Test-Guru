@@ -9,15 +9,8 @@ class TestPassage < ApplicationRecord
   after_save :set_badges, if: :completed_and_successful?
 
   scope :successful_passages, -> { where(successful: true) }
-  scope :correct_tests_within_category, ->(category) { joins(:test)
-                                                       .joins('JOIN categories ON category_id = categories.id')
-                                                       .where('categories.title = ?', category)
-                                                       .successful_passages
-                                                       }
-  scope :correct_tests_within_level, ->(level) { joins(:test)
-                                                 .where('tests.level = ?', level)
-                                                 .successful_passages 
-                                                }
+  scope :correct_tests_within_category, ->(category) { successful_passages.includes(test: :category).where(category: { title: category })}
+  scope :correct_tests_within_level, ->(level) { successful_passages.includes(:test).where(test: { level: level }) }
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
