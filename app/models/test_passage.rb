@@ -4,17 +4,14 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :user
   belongs_to :current_question, class_name: "Question", optional: true
-  before_update :before_update_set_successful
   before_save :before_save_set_question
-  after_save :set_badges, if: :completed_and_successful?
 
   scope :successful_passages, -> { where(successful: true) }
-  scope :correct_tests_within_category, ->(category) { successful_passages.includes(test: :category).where(category: { title: category })}
-  scope :correct_tests_within_level, ->(level) { successful_passages.includes(:test).where(test: { level: level }) }
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
+    set_successful
     save!
   end
 
@@ -24,10 +21,6 @@ class TestPassage < ApplicationRecord
 
   def successful?
     correct_question_percentage >= CORRECT_QUESTIONS_RATIO
-  end
-
-  def completed_and_successful?
-    successful? && completed?
   end
 
   def correct_question_percentage
@@ -43,10 +36,6 @@ class TestPassage < ApplicationRecord
   end
 
   protected
-
-  def set_badges
-    BadgeService.new(self).call
-  end
 
   def first_question
     test.questions.first
@@ -74,7 +63,7 @@ class TestPassage < ApplicationRecord
     self.current_question = next_question
   end
 
-  def before_update_set_successful
+  def set_successful
     self.successful = true if completed? && successful?
   end
 end

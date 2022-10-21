@@ -10,9 +10,9 @@ class Test < ApplicationRecord
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   scope :by_level, ->(level) { where(level: level) }
-  scope :by_category, ->(category_title) {
+  scope :by_category, ->(category_id) {
                         joins(:category)
-                          .where(categories: { title: category_title })
+                          .where(categories: { id: category_id })
                           .order(title: :desc)
                       }
   scope :easy, -> { where(level: 0..1) }

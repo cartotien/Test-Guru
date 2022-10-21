@@ -1,4 +1,10 @@
 class BadgeService
+  CONDITIONS = {
+    first_test: Badges::FirstTest,
+    all_tests_in_category: Badges::AllTestsInCategory,
+    all_tests_with_level: Badges::AllTestsWithLevel
+  }.freeze
+
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
@@ -6,24 +12,9 @@ class BadgeService
 
   def call
     Badge.find_each do |badge|
-      add_badge!(badge) if public_send(:"#{badge.condition}?", *badge.condition_parameter)
+      condition = CONDITIONS[badge.condition.to_sym].new(@test_passage, badge.condition_parameter)
+      add_badge!(badge) if condition.satisfied?
     end
-  end
-
-  def first_test?
-    @user.test_passages.count == 1
-  end
-
-  def all_tests_in_category?(category)
-    return false unless @test_passage.test.category.title == category
-
-    @user.test_passages.correct_tests_within_category(category).pluck('DISTINCT test_id').count == Test.by_category(category).count
-  end
-
-  def all_tests_with_level?(level)
-    return false unless @test_passage.test.level == level.to_i
-
-    @user.test_passages.correct_tests_within_level(level.to_i).pluck('DISTINCT test_id').count == Test.by_level(level).count
   end
 
   private
