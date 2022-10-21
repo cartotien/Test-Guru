@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: :create
   resources :sessions, only: :create
   resources :feedbacks, only: %i[new create]
+  resources :badges, only: :index
 
   resources :tests do
 
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "tests#index"
     resources :gists
+    resources :badges
 
     resources :tests do
       patch :update_inline, on: :member

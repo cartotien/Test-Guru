@@ -4,6 +4,7 @@
       <% if user_signed_in? %>
         <li class="nav-item">
           <p>
+            <%= link_to t('badges'), badges_path %>
             <%= link_to t('admin.navbar.admin_panel'), admin_root_path if current_user.admin?%>
             <%= t('welcome')%>, 
             <b><%= current_user.email %></b> |
