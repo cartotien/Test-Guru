@@ -36,7 +36,7 @@ class TestPassage < ApplicationRecord
   end
 
   def timer_passed?
-    Time.zone.now.to_i > timer_deadline
+    time_left <= 0
   end
 
   def time_left
