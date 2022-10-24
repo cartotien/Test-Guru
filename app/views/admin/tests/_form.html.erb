@@ -8,7 +8,10 @@
 
     <%= form.label :level %>
     <%= form.number_field :level, class: 'form-control' %><br>
-  
+
+    <%= form.label :timer %>
+    <%= form.number_field_ :timer, class: 'form-control' %>
+    
     <div><%= form.label :category %></div>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
     

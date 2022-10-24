@@ -16,7 +16,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timer_passed?
   end
 
   def successful?
@@ -33,6 +33,18 @@ class TestPassage < ApplicationRecord
 
   def number_of_questions
     test.questions.count
+  end
+
+  def timer_passed?
+    Time.zone.now.to_i > timer_deadline
+  end
+
+  def time_left
+    timer_deadline.to_i - Time.zone.now.to_i
+  end
+
+  def timer_deadline
+    created_at.to_i + test.timer
   end
 
   protected

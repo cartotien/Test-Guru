@@ -7,6 +7,11 @@
                   data: { current_question_number: @test_passage.current_question_number, 
                           number_of_questions: @test_passage.number_of_questions } do %>
   <% end %>
+  <div class="timer" data-timer="<%= @test_passage.time_left %>">
+    <div >
+      <%= @test_passage.time_left %>
+    </div>
+  </div>
 </div><br>
 
 
