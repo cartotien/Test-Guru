@@ -363,6 +363,7 @@ ru:
       passing: 'Проходим'
       level: 'Уровень:'
       category: 'Категория:'
+      timer: 'Времени осталось: '
     result:
       was_completed: 'был пройден!'
   gists:
